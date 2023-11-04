@@ -1,5 +1,5 @@
 import img from './../../assets/img/1.jpg';
-import { GiHamburgerMenu, GiTargetPoster } from 'react-icons/gi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose, AiFillHome, AiFillQuestionCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
