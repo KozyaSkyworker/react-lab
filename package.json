@@ -2,7 +2,6 @@
   "name": "ulsu-maga-web-lab",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kozyaskyworker.github.io/react-lab",
   "type": "module",
   "scripts": {
     "dev": "vite",
