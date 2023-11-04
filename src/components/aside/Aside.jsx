@@ -1,33 +1,34 @@
-import { useState } from 'react';
 import img from './../../assets/img/1.jpg';
 import { GiHamburgerMenu, GiTargetPoster } from 'react-icons/gi';
 import { AiOutlineClose, AiFillHome, AiFillQuestionCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-const Aside = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+const Aside = ({ currentVisible, setCurrentVisible }) => {
   return (
     <aside
       className={
-        'pl-1 pr-3 aside border-r-2 border-black/13 w-64 h-screen fixed l-0 transition-transform z-10' +
-        (isOpen ? ' ' : ' -translate-x-full')
+        'bg-zinc-300/20 pl-1 pr-3 aside border-r-2 border-black/13 w-64 h-screen fixed l-0 transition-transform z-10' +
+        (currentVisible ? ' ' : ' -translate-x-full')
       }>
       <div className="aside__inner relative cursor-pointer pt-8">
         <span
           className="text-2xl hover:text-violet-800 absolute hover:bg-gray-200 rounded-full p-1 top-1 -right-14"
-          onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+          onClick={() => setCurrentVisible(!currentVisible)}>
+          {currentVisible ? <AiOutlineClose /> : <GiHamburgerMenu />}
         </span>
         <Link
           className="inline-block w-full my-3 aside__logo text-center text-3xl font-bold hover:text-violet-800"
-          to="/">
+          to="/"
+          onClick={() => setCurrentVisible(false)}>
           Posters
         </Link>
         <nav className="navigation">
           <ul className="navigation__list">
             <li className="my-3 navigation__item text-center">
-              <Link to="/" className="navigation__link inline-block text-xl hover:text-violet-800">
+              <Link
+                to="/"
+                onClick={() => setCurrentVisible(false)}
+                className="navigation__link inline-block text-xl hover:text-violet-800">
                 <p className="flex items-center ">
                   {' '}
                   Главная
@@ -42,6 +43,7 @@ const Aside = () => {
             <li className="my-3 navigation__item text-center">
               <Link
                 to="/about"
+                onClick={() => setCurrentVisible(false)}
                 className="navigation__link inline-block text-xl hover:text-violet-800">
                 <p className="flex items-center">
                   {' '}
