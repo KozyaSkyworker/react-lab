@@ -19,7 +19,7 @@ const App = () => {
           </h1>
           <Routes>
             <Route path="/" element={<Home changeTitle={setTitle} />}></Route>
-            <Route path="/order" element={<Order changeTitle={setTitle} />}></Route>
+            <Route path="/order/:orderId" element={<Order changeTitle={setTitle} />}></Route>
             <Route path="/about" element={<About changeTitle={setTitle} />}></Route>
             <Route path="*" element={<NotFound changeTitle={setTitle} />}></Route>
           </Routes>
