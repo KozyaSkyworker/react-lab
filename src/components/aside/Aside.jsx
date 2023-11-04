@@ -18,7 +18,7 @@ const Aside = ({ currentVisible, setCurrentVisible }) => {
         </span>
         <Link
           className="inline-block w-full my-3 aside__logo text-center text-3xl font-bold hover:text-violet-800"
-          to="/"
+          to="react-lab/"
           onClick={() => setCurrentVisible(false)}>
           Posters
         </Link>
@@ -26,7 +26,7 @@ const Aside = ({ currentVisible, setCurrentVisible }) => {
           <ul className="navigation__list">
             <li className="my-3 navigation__item text-center">
               <Link
-                to="/"
+                to="react-lab/"
                 onClick={() => setCurrentVisible(false)}
                 className="navigation__link inline-block text-xl hover:text-violet-800">
                 <p className="flex items-center ">
@@ -42,7 +42,7 @@ const Aside = ({ currentVisible, setCurrentVisible }) => {
             <img className="rounded-xl my-6 block cursor-auto" src={img} alt="poster" />
             <li className="my-3 navigation__item text-center">
               <Link
-                to="/about"
+                to="react-lab/about"
                 onClick={() => setCurrentVisible(false)}
                 className="navigation__link inline-block text-xl hover:text-violet-800">
                 <p className="flex items-center">
