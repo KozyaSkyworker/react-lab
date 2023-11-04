@@ -100,7 +100,7 @@ const Home = ({ changeTitle }) => {
                   </p>
                   <Link
                     className="my-2 block px-2 py-1 bg-violet-800 text-white rounded-xl hover:bg-violet-600"
-                    to={`/order/${itm.id}`}>
+                    to={`react-lab/order/${itm.id}`}>
                     Заказать
                   </Link>
                 </div>
