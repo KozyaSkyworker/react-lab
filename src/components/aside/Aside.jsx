@@ -2,6 +2,7 @@ import { useState } from 'react';
 import img from './../../assets/img/1.jpg';
 import { GiHamburgerMenu, GiTargetPoster } from 'react-icons/gi';
 import { AiOutlineClose, AiFillHome, AiFillQuestionCircle } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Aside = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ const Aside = () => {
   return (
     <aside
       className={
-        'pl-1 pr-3 aside border-r-2 border-black/13 w-64 h-screen fixed l-0 transition-transform' +
+        'pl-1 pr-3 aside border-r-2 border-black/13 w-64 h-screen fixed l-0 transition-transform z-10' +
         (isOpen ? ' ' : ' -translate-x-full')
       }>
       <div className="aside__inner relative cursor-pointer pt-8">
@@ -18,15 +19,15 @@ const Aside = () => {
           onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
         </span>
-        <a
+        <Link
           className="inline-block w-full my-3 aside__logo text-center text-3xl font-bold hover:text-violet-800"
-          href="/">
+          to="/">
           Posters
-        </a>
+        </Link>
         <nav className="navigation">
           <ul className="navigation__list">
             <li className="my-3 navigation__item text-center">
-              <a href="#" className="navigation__link inline-block text-xl hover:text-violet-800">
+              <Link to="/" className="navigation__link inline-block text-xl hover:text-violet-800">
                 <p className="flex items-center ">
                   {' '}
                   Главная
@@ -34,22 +35,14 @@ const Aside = () => {
                     <AiFillHome />
                   </span>
                 </p>
-              </a>
+              </Link>
             </li>
-            <li className=" my-3 navigation__item text-center">
-              <a href="#" className="navigation__link inline-block text-xl hover:text-violet-800">
-                <p className="flex items-center">
-                  {' '}
-                  Каталог
-                  <span className="ml-3 inline-block">
-                    <GiTargetPoster />
-                  </span>
-                </p>
-              </a>
-            </li>
+
             <img className="rounded-xl my-6 block cursor-auto" src={img} alt="poster" />
             <li className="my-3 navigation__item text-center">
-              <a href="#" className="navigation__link inline-block text-xl hover:text-violet-800">
+              <Link
+                to="/about"
+                className="navigation__link inline-block text-xl hover:text-violet-800">
                 <p className="flex items-center">
                   {' '}
                   Почему мы
@@ -57,7 +50,7 @@ const Aside = () => {
                     <AiFillQuestionCircle />
                   </span>
                 </p>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
