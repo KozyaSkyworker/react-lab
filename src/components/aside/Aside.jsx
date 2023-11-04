@@ -7,7 +7,7 @@ const Aside = ({ currentVisible, setCurrentVisible }) => {
   return (
     <aside
       className={
-        'bg-zinc-300/20 pl-1 pr-3 aside border-r-2 border-black/13 w-64 h-screen fixed l-0 transition-transform z-10' +
+        'bg-zinc-300 pl-1 pr-3 aside border-r-2 border-black/13 w-64 h-screen fixed l-0 transition-transform z-10' +
         (currentVisible ? ' ' : ' -translate-x-full')
       }>
       <div className="aside__inner relative cursor-pointer pt-8">
