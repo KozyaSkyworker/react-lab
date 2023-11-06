@@ -1,0 +1,32 @@
+@media(max-width: 1260px){
+    .home__goods{
+        margin: 0 -10px !important;
+    }
+    .home__poster{
+        width: calc(100% / 2 - 20px) !important;
+    }
+}
+
+@media (max-width:768px) {
+    .home__poster{
+        width: 100% !important;
+    }
+}
+
+@media (max-width:648px) {
+    .home__controls{
+        flex-direction: column;
+    }
+    .home__tabs ul{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 320px){
+    .tab{
+        display: flex;
+        align-items: center;justify-content: center;
+        text-align: center;
+    }
+}

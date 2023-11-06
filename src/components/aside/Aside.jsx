@@ -4,6 +4,8 @@ import { AiOutlineClose, AiFillHome, AiFillQuestionCircle } from 'react-icons/ai
 import { Link } from 'react-router-dom';
 
 const Aside = ({ currentVisible, setCurrentVisible }) => {
+  console.log('ASIDE is rerender');
+
   return (
     <aside
       className={

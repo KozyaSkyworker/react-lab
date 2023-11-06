@@ -1,0 +1,11 @@
+@media (max-width: 480px) {
+    .about__item{
+        display: block !important; 
+        text-align: center  ;
+    }
+    .about__item span{
+        white-space: wrap;
+        display: block !important;
+        margin: 0 !important;
+    }
+}

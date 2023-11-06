@@ -13,7 +13,7 @@ const App = () => {
     <>
       <Aside currentVisible={isAsideOpen} setCurrentVisible={setIsAsideOpen} />
       <main className="main">
-        <div className="container mx-auto pt-12 px-2" style={{ width: '1230px' }}>
+        <div className="container mx-auto pt-12 px-2" style={{ maxWidth: '1230px' }}>
           <h1 className="text-3xl block mb-10 text-violet-800 font-medium border-b-2 border-dashed border-violet-800 pb-1 w-min px-1 whitespace-nowrap">
             {title}
           </h1>
