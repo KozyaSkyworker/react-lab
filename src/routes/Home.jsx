@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import intialData from './../data';
 import { Link } from 'react-router-dom';
 
-import './home.css';
+import './../assets/mediaStyles/home.css';
 
 const Home = ({ changeTitle }) => {
   console.log('HOME is rerender');

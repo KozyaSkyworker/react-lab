@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import poster from './../assets/img/example.jpg';
 
-import './about.css';
+import './../assets/mediaStyles/about.css';
 
 const About = ({ changeTitle }) => {
   useEffect(() => changeTitle('О нас'));

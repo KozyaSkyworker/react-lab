@@ -1,10 +1,11 @@
 import Aside from './components/aside/Aside';
 import { Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
-import Home from './routes/Home';
-import Order from './routes/Order';
-import About from './routes/About';
-import NotFound from './routes/NotFound';
+import { Suspense, lazy, useState } from 'react';
+
+const Home = lazy(() => import('./routes/Home'));
+const Order = lazy(() => import('./routes/Order'));
+const About = lazy(() => import('./routes/About'));
+const NotFound = lazy(() => import('./routes/NotFound'));
 
 const App = () => {
   const [isAsideOpen, setIsAsideOpen] = useState(false);
@@ -18,12 +19,34 @@ const App = () => {
             {title}
           </h1>
           <Routes>
-            <Route path="react-lab/" element={<Home changeTitle={setTitle} />}></Route>
+            <Route
+              path="react-lab/"
+              element={
+                <Suspense fallback={<p>Загрузка...</p>}>
+                  <Home changeTitle={setTitle} />
+                </Suspense>
+              }></Route>
             <Route
               path="react-lab/order/:orderId"
-              element={<Order changeTitle={setTitle} />}></Route>
-            <Route path="react-lab/about" element={<About changeTitle={setTitle} />}></Route>
-            <Route path="react-lab/*" element={<NotFound changeTitle={setTitle} />}></Route>
+              element={
+                <Suspense fallback={<p>Загрузка...</p>}>
+                  <Order changeTitle={setTitle} />
+                </Suspense>
+              }></Route>
+            <Route
+              path="react-lab/about"
+              element={
+                <Suspense fallback={<p>Загрузка...</p>}>
+                  <About changeTitle={setTitle} />
+                </Suspense>
+              }></Route>
+            <Route
+              path="react-lab/*"
+              element={
+                <Suspense fallback={<p>Загрузка...</p>}>
+                  <NotFound changeTitle={setTitle} />
+                </Suspense>
+              }></Route>
           </Routes>
         </div>
       </main>
