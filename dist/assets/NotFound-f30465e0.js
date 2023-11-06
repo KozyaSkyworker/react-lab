@@ -1,0 +1,1 @@
+import{r as s,j as r,L as t}from"./index-f480f958.js";const o=({changeTitle:e})=>(s.useEffect(()=>e("Ошибка 404. Кажется, такой страницы нет")),r.jsx(r.Fragment,{children:r.jsx(t,{className:"border-b-2 border-dashed",to:"react-lab/",children:"Уйти на главную"})}));export{o as default};
