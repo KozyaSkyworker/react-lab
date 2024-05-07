@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import './../assets/mediaStyles/home.css';
 
 const Home = ({ changeTitle }) => {
-  console.log('HOME is rerender');
-
   useEffect(() => changeTitle('Главная'));
 
   const [data, setData] = useState(intialData);
